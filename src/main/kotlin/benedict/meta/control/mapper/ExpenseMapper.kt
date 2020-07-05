@@ -17,6 +17,7 @@ object ExpenseMapper {
                     entity.amount,
                     entity.label,
                     entity.description,
-                    entity.regularExpense
+                    entity.regularExpense,
+                    entity.transactionDate
             )
 }

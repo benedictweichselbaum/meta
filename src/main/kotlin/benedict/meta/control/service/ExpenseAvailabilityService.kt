@@ -12,7 +12,7 @@ class ExpenseAvailabilityService (
 
     fun checkIfExpenseExists (id: Long) {
         if (!this.expenseRepository.existsById(id)) {
-            throw ExpenseNotFoundException(ExceptionConstants.EXPENSE_NOT_FOUND_ERROR_MESSAGE)
+            throw ExpenseNoddtFoundException(ExceptionConstants.EXPENSE_NOT_FOUND_ERROR_MESSAGE)
         }
     }
 }

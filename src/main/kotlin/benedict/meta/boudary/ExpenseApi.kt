@@ -42,7 +42,7 @@ class ExpenseApi (
     }
 
     /**
-     * API-Method for reading a single expense. Uses id to identify.
+     * API-Method for reading a single expense. Uses id to identify expense.
      */
     @GetMapping("/{id}")
     fun getExpenseById (@PathVariable("id") id: Long): ResponseEntity<ExpenseTO> =
@@ -56,7 +56,7 @@ class ExpenseApi (
             ResponseEntity.ok(this.expenseFacade.readAllExpenses())
 
     /**
-     * API-Method for deleting a expense. Uses id to identify
+     * API-Method for deleting a expense. Uses id to identify expense.
      */
     @DeleteMapping("/{id}")
     fun deleteExpenseById (@PathVariable("id") id: Long): ResponseEntity<Void> {
